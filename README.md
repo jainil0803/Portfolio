@@ -7,53 +7,45 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background: linear-gradient(135deg, #000000, #0a0f2c, #1a1a40);
-      color: white;
-      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #e5e5e5;
+      font-family: 'Inter', sans-serif;
     }
     .gradient-text {
-      background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffcc);
+      background: linear-gradient(90deg, #3b82f6, #9333ea);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-size: 300% 300%;
-      animation: gradientShift 5s ease infinite;
     }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2d2d2d;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .glass {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .glass:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 25px rgba(255, 0, 200, 0.4);
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     }
     .btn {
-      background: linear-gradient(90deg, #ff00cc, #3333ff);
+      background: linear-gradient(90deg, #3b82f6, #9333ea);
       color: white;
-      font-weight: bold;
+      font-weight: 500;
       padding: 10px 20px;
-      border-radius: 9999px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 0.5rem;
+      transition: background 0.3s;
     }
     .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(255, 0, 200, 0.6);
+      background: linear-gradient(90deg, #2563eb, #7e22ce);
     }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center">
   <!-- Header -->
-  <header class="text-center mt-10">
+  <header class="text-center mt-12">
     <h1 class="text-5xl font-bold gradient-text">Jainil Panigrahi</h1>
-    <p class="mt-3 text-lg">B.Tech - Energy Science and Engineering, IIT Guwahati</p>
-    <div class="flex justify-center gap-4 mt-5">
+    <p class="mt-3 text-lg text-gray-300">B.Tech - Energy Science and Engineering, IIT Guwahati</p>
+    <div class="flex justify-center gap-4 mt-6">
       <a href="https://github.com/jainil0803" target="_blank" class="btn">GitHub</a>
       <a href="https://www.linkedin.com/in/jainil-panigrahi" target="_blank" class="btn">LinkedIn</a>
       <a href="Jainil_Resume.pdf" class="btn">Download Resume</a>
@@ -64,17 +56,17 @@
   <section class="mt-16 w-11/12 md:w-3/4">
     <h2 class="text-3xl font-semibold mb-6 gradient-text">Projects</h2>
     <div class="grid md:grid-cols-2 gap-6">
-      <div class="glass p-6">
-        <h3 class="text-xl font-bold">Web 3.0 Blockchain Application</h3>
-        <p class="mt-2">Built a decentralized app with MetaMask, Solidity smart contracts, and Giphy API dashboard.</p>
+      <div class="card">
+        <h3 class="text-xl font-semibold">Web 3.0 Blockchain Application</h3>
+        <p class="mt-2 text-gray-400">Decentralized app with MetaMask, Solidity smart contracts, and Giphy API dashboard.</p>
       </div>
-      <div class="glass p-6">
-        <h3 class="text-xl font-bold">Airhawks</h3>
-        <p class="mt-2">Full-stack flight booking app with JWT auth, SHA-256 hashing, Razorpay payments, React + Chakra UI.</p>
+      <div class="card">
+        <h3 class="text-xl font-semibold">Airhawks</h3>
+        <p class="mt-2 text-gray-400">Full-stack flight booking app with JWT auth, SHA-256 hashing, Razorpay payments, React + Chakra UI.</p>
       </div>
-      <div class="glass p-6">
-        <h3 class="text-xl font-bold">Dynamic Pricing System</h3>
-        <p class="mt-2">Real-time smart parking pricing using streaming, geospatial modeling, and visualization with Pathway.</p>
+      <div class="card">
+        <h3 class="text-xl font-semibold">Dynamic Pricing System</h3>
+        <p class="mt-2 text-gray-400">Real-time smart parking pricing with streaming data, geospatial modeling, and dashboards.</p>
       </div>
     </div>
   </section>
@@ -82,7 +74,7 @@
   <!-- Skills -->
   <section class="mt-16 w-11/12 md:w-3/4">
     <h2 class="text-3xl font-semibold mb-6 gradient-text">Technical Skills</h2>
-    <div class="glass p-6 grid grid-cols-2 gap-4 text-sm md:text-base">
+    <div class="card grid grid-cols-2 gap-4 text-sm md:text-base">
       <p><b>Programming:</b> Python, C/C++, JavaScript, TypeScript</p>
       <p><b>Web Dev:</b> React, Tailwind, Node.js, Express.js</p>
       <p><b>Blockchain:</b> Solidity, Ethereum, IPFS, Truffle, ethers.js, web3.js</p>
@@ -95,7 +87,7 @@
   <!-- Education -->
   <section class="mt-16 w-11/12 md:w-3/4">
     <h2 class="text-3xl font-semibold mb-6 gradient-text">Education</h2>
-    <div class="glass p-6">
+    <div class="card space-y-2">
       <p><b>B.Tech Major:</b> IIT Guwahati — 7.55 CGPA (2021–2025)</p>
       <p><b>Senior Secondary:</b> CBSE Board — 85% (2023)</p>
       <p><b>Secondary:</b> CBSE Board — 94% (2021)</p>
@@ -105,10 +97,10 @@
   <!-- Achievements -->
   <section class="mt-16 w-11/12 md:w-3/4 mb-20">
     <h2 class="text-3xl font-semibold mb-6 gradient-text">Achievements</h2>
-    <div class="glass p-6 space-y-2">
-      <p>🏆 Blockchain Challenge (IITG Hostel Tech Fest) — 3rd Position (2024)</p>
-      <p>🤖 Robotics Challenge (IITG Hostel Tech Fest) — 2nd Position (2024)</p>
-      <p>🎭 Mime Competition (IITG Cultural Fest) — 2nd Position (2024)</p>
+    <div class="card space-y-2 text-gray-300">
+      <p>🏆 Blockchain Challenge — 3rd Position (IITG Hostel Tech, 2024)</p>
+      <p>🤖 Robotics Challenge — 2nd Position (IITG Hostel Tech, 2024)</p>
+      <p>🎭 Mime Competition — 2nd Position (IITG Cultural Fest, 2024)</p>
       <p>📊 MnAnalyse — 12th Rank among 2000+ participants (2025)</p>
       <p>📘 JEE Advanced 2021 — AIR 5462</p>
       <p>📘 JEE Mains 2021 — AIR 7422</p>
@@ -116,8 +108,8 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 text-center text-gray-400 text-sm">
-    © 2025 Jainil Panigrahi | Built with ❤️ using Tailwind CSS
+  <footer class="py-6 text-center text-gray-500 text-sm">
+    © 2025 Jainil Panigrahi | Portfolio
   </footer>
 </body>
 </html>
